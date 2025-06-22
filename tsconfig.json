@@ -1,0 +1,14 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@primeuix/*": ["node_modules/@primeuix/*"],
+      "@components/*": ["components/*"],
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"],
+      "@composables/*": ["composables/*"]
+    },
+    "moduleResolution": "node"
+  }
+}
