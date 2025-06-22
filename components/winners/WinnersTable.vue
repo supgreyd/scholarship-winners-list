@@ -11,7 +11,7 @@
       :lazy="true"
       scrollable
       scrollHeight="calc(100vh - 180px)"
-      class="min-h-[calc(100vh - 180px)]"
+      class="flex flex-col justify-center h-full"
       paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown CurrentPageReport"
       currentPageReportTemplate="{first} - {last} / {totalRecords}"
   >
@@ -22,21 +22,12 @@
         :header="column.header">
       <template v-if="column.header === EWinnersTableHeaders.PHOTO"
                 #body="slotProps">
-        <NuxtImg
+        <img
             :src="slotProps.data.attributes.winnerPhoto"
             :alt="slotProps.data.attributes.winnerName"
-            :custom="true"
             class="w-12 h-12 rounded-full object-cover border-2 border-primary"
-            v-slot="{ src, isLoaded, imgAttrs }"
             loading="lazy"
-        >
-          <img
-              v-if="isLoaded"
-              v-bind="imgAttrs"
-              :src="src"
-          >
-          <Skeleton v-else shape="circle" size="3rem" />
-        </NuxtImg>
+        />
       </template>
       <template v-if="column.header === EWinnersTableHeaders.DATE"
                 #body="slotProps">
@@ -64,7 +55,7 @@ import type { DataTablePageEvent } from "primevue";
 
 import { EWinnersTableHeaders } from "@models/scholarshipWinner";
 
-import { DataTable, Column, Button, Skeleton } from "primevue";
+import { DataTable, Column, Button } from "primevue";
 
 interface WinnersTableProps {
   winners: IScholarshipWinnerResource[]

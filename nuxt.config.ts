@@ -4,7 +4,7 @@ import Aura from '@primeuix/themes/aura';
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const primeVueComponents = ['Button', 'DataTable', 'Column', 'DynamicDialog', 'Skeleton']
+const primeVueComponents = ['Button', 'DataTable', 'Column', 'DynamicDialog', 'Skeleton', 'Paginator', 'Select']
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@primevue/nuxt-module',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image',
     '@nuxtjs/sitemap',
     '@nuxt-modules/compression',
     '@nuxtjs/robots',
@@ -33,11 +32,8 @@ export default defineNuxtConfig({
       }
     }
   },
-  image: {
-    format: ['webp'],
-  },
   sitemap: {
-    hostname: 'https://yourwebsite.com',
+    hostname: 'https://scholarship-winners-list.netlify.app',
     routes: async () => {
       return ['/']
     },

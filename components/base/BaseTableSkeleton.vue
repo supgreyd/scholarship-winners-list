@@ -1,18 +1,21 @@
 <template>
-  <div class="card">
-    <DataTable :value="tableRows">
-      <Column
-        v-for="column in tableColumns"
-        :key="column.field"
-        :field="column.field"
-        :header="column.header"
-      >
-        <template #body>
-          <Skeleton></Skeleton>
-        </template>
-      </Column>
-    </DataTable>
-  </div>
+  <DataTable
+      :value="tableRows"
+      class="flex flex-col justify-center h-full"
+      scrollable
+      scrollHeight="calc(100vh - 120px)"
+  >
+    <Column
+      v-for="column in tableColumns"
+      :key="column.field"
+      :field="column.field"
+      :header="column.header"
+    >
+      <template #body>
+        <Skeleton height="3rem" />
+      </template>
+    </Column>
+  </DataTable>
 </template>
 
 <script setup lang="ts">

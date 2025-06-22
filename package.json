@@ -12,7 +12,6 @@
   "dependencies": {
     "@nuxt-modules/compression": "^0.1.0",
     "@nuxt/eslint": "^1.4.1",
-    "@nuxt/image": "^1.10.0",
     "@nuxtjs/robots": "^5.2.11",
     "@nuxtjs/sitemap": "^7.4.1",
     "@primeuix/themes": "^1.1.2",

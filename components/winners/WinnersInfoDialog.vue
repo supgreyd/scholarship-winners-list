@@ -1,21 +1,12 @@
 <template>
   <div v-if="winner" class="space-y-6">
     <div class="flex items-center space-x-4">
-      <NuxtImg
+      <img
           :src="winner.winnerPhoto"
           :alt="winner.winnerName"
-          :custom="true"
           class="w-20 h-20 rounded-full object-cover border-2 border-primary"
-          v-slot="{ src, isLoaded, imgAttrs }"
-      >
-        <img
-            v-if="isLoaded"
-            v-bind="imgAttrs"
-            :src="src"
-            loading="lazy"
-        >
-        <Skeleton v-else shape="circle" size="4rem" />
-      </NuxtImg>
+          loading="lazy"
+      />
       <div>
         <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100">{{ winner.winnerName }}</h2>
         <p class="text-sm text-gray-500 dark:text-gray-400">

@@ -13,15 +13,15 @@ useHead({
     { name: 'description', content: 'Scholarship winners list' },
     { name: 'keywords', content: 'scholarship, winners, list' },
   ],
-  link: [{ rel: 'canonical', href: 'https://yourwebsite.com/current-page' }],
+  link: [{ rel: 'canonical', href: 'https://scholarship-winners-list.netlify.app' }],
   script: [
     {
       type: 'application/ld+json',
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Organization",
-        "url": "https://yourwebsite.com",
-        "name": "Your Site Name",
+        "url": "https://scholarship-winners-list.netlify.app",
+        "name": "Scholarship winners",
       }),
     },
   ],

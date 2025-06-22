@@ -28,7 +28,7 @@ import { EWinnersTableHeaders } from "@models/scholarshipWinner";
 
 import WinnersTable from "@components//winners/WinnersTable.vue";
 import BaseTableSkeleton from "@components//base/BaseTableSkeleton.vue";
-import DialogWinnerInfo from "@components//dialogs/DialogWinnerInfo.vue";
+import WinnersInfoDialog from "@components/winners/WinnersInfoDialog.vue";
 import BaseError from "@components//base/BaseError.vue";
 
 const rowsPerPageOptions = [10, 20, 50, 100]
@@ -72,7 +72,7 @@ const pageHandler = async (event: DataTablePageEvent) => {
 }
 
 const dialogHandler = (winner: IScholarshipWinnerAttributes) => {
-  dialog.open(DialogWinnerInfo, {
+  dialog.open(WinnersInfoDialog, {
     props: {
       header: 'Scholarship winner',
       style: {
